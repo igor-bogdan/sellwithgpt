@@ -19,17 +19,10 @@
       padding: 80px 24px;
     }
 
-.screenshot-stack {
-  display: grid;
-  gap: 40px;
+    .screenshot-stack {
+      display: grid;
+      gap: 40px;
     }
-
-.screenshot-mosaic {
-  display: grid;
-  grid-template-columns: 0.72fr 1.28fr;
-  gap: 40px;
-  align-items: start;
-}
 
     .screenshot-card {
       background: #fff;
@@ -45,7 +38,14 @@
       height: auto;
     }
 
-    @media (max-width: 800px) {
+    .screenshot-mosaic {
+      display: grid;
+      grid-template-columns: 420px minmax(0, 1fr);
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
       main {
         padding: 40px 16px;
       }
@@ -53,30 +53,31 @@
       .screenshot-stack {
         gap: 28px;
       }
+
       .screenshot-mosaic {
-  grid-template-columns: 1fr;
-}
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
   <main>
-<div class="screenshot-stack">
-  <div class="screenshot-card">
-    <img src="../assets/lead-finder/lead-finder-setup.png.png" alt="">
-  </div>
+    <div class="screenshot-stack">
+      <div class="screenshot-card">
+        <img src="../assets/lead-finder/lead-finder-setup.png.png" alt="">
+      </div>
 
-  <div class="screenshot-mosaic">
-    <div class="screenshot-card">
-      <img src="../assets/lead-finder/lead-finder-scanner-downloads.png.png" alt="">
-    </div>
+      <div class="screenshot-mosaic">
+        <div class="screenshot-card">
+          <img src="../assets/lead-finder/lead-finder-scanner-downloads.png.png" alt="">
+        </div>
 
-    <div class="screenshot-card">
-      <img src="../assets/lead-finder/lead-finder-results.png.png" alt="">
+        <div class="screenshot-card">
+          <img src="../assets/lead-finder/lead-finder-results.png.png" alt="">
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   </main>
 </body>
 </html>
